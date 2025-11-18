@@ -487,7 +487,73 @@
         }
 
         /* Video Section */
-        
+        .video-section {
+            padding: 8rem 5%;
+            background: linear-gradient(135deg, #0f0f0f 0%, #1a1a1a 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .video-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at 30% 50%, rgba(245, 158, 11, 0.1) 0%, transparent 50%);
+        }
+
+        .video-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .video-container .section-label {
+            color: var(--accent);
+        }
+
+        .video-container .about-title {
+            color: var(--light);
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+
+        .video-subtitle {
+            text-align: center;
+            color: var(--gray);
+            font-family: 'Segoe UI', sans-serif;
+            font-size: 1.1rem;
+            margin-bottom: 4rem;
+        }
+
+        .video-wrapper {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            border-radius: 20px;
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5);
+            border: 2px solid rgba(245, 158, 11, 0.3);
+            transition: all 0.3s;
+        }
+
+        .video-wrapper:hover {
+            transform: scale(1.02);
+            border-color: var(--primary);
+            box-shadow: 0 40px 80px rgba(245, 158, 11, 0.3);
+        }
+
+        .video-wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
 
         /* Certificates Section */
         .certificates-section {
@@ -988,7 +1054,7 @@
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#skills">Skills</a></li>
-              <!-- vedio soon -->
+                <li><a href="#video">Video</a></li>
                 <li><a href="#certificates">Certificates</a></li>
                 <li><a href="#interests">Interests</a></li>
                 <li><a href="#contact">Contact</a></li>
@@ -1040,28 +1106,24 @@
                 <p class="about-text">With expertise in C++, Java, and Python, I'm now expanding my skills into the MERN stack to become a versatile full-stack developer. I believe in creating web applications that are not only functional but also beautiful and user-friendly.</p>
                 <p class="about-text">When I'm not coding, you'll find me exploring the mysteries of the cosmos or losing myself in music—both of which inspire my approach to technology and creativity.</p>
                 
-                <ul class="info-list">
-                    <li>
-                        <strong>University</strong>
-                        <span>American International University Bangladesh</span>
-                    </li>
-                    <li>
-                        <strong>College</strong>
-                        <span>Cantonment Public School and College, Momenshahi</span>
-                    </li>
-                    <li>
-                        <strong>Current Semester</strong>
-                        <span>6th Semester</span>
-                    </li>
-                    <li>
-                        <strong>Focus</strong>
-                        <span>Full Stack Web Development</span>
-                    </li>
-                    <li>
-                        <strong>Location</strong>
-                        <span>Dhaka, Bangladesh</span>
-                    </li>
-                </ul>
+            <ul class="info-list">
+                <li>
+                    <strong>University</strong>
+                    <span>American International University Bangladesh - 6th Semester</span>
+                </li>
+                <li>
+                    <strong>HSC (2019-2021)</strong>
+                    <span>Cantonment Public School and College,Momenshahi - GPA  5.00</span>
+                </li>
+                <li>
+                    <strong>SSC (2017-2019)</strong>
+                    <span>Bhaluka Govt. Girls High School - GPA 5.00</span>
+                </li>
+                <li>
+                    <strong>Focus</strong>
+                    <span>Full Stack Web Development</span>
+                </li>
+            </ul>
             </div>
         </div>
     </section>
@@ -1150,7 +1212,24 @@
     </section>
 
     <!-- Video Section -->
-  
+    <section class="video-section reveal" id="video">
+        <div class="video-container">
+            <p class="section-label">Get To Know Me</p>
+            <h2 class="about-title">A Personal Introduction</h2>
+            <p class="video-subtitle">Watch this video to learn more about my journey, passion, and vision</p>
+            
+            <div class="video-wrapper">
+                <!-- Replace the src with your actual YouTube video link -->
+                <!-- Example: https://www.youtube.com/embed/YOUR_VIDEO_ID -->
+                <iframe 
+                    src="https://www.youtube.com/watch?v=GxldQ9eX2wo&list=RDGxldQ9eX2wo&start_radio=1" 
+                    title="About Tanjima Tasnim Oyshi" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen>
+                </iframe>
+            </div>
+        </div>
+    </section>
 
     <!-- Certificates Section -->
     <section class="certificates-section reveal" id="certificates">
